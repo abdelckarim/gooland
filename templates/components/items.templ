@@ -1,0 +1,25 @@
+package components
+
+templ ItemsHome(typ, name string) {
+
+   Este es un componente al que le puedes pasar datos que quieras. {typ} - {name}
+       <form action="/api/v1/register" method="post">
+        <label for="u_nombre">Nombre de usuario:</label>
+        <input type="text" id="u_nombre" name="u_nombre" />
+        <label for="u_pwd">Contraseña:</label>
+        <input type="password" id="u_pwd" name="u_pwd" />
+        <label for="u_email">Email:</label>
+        <input type="email" id="u_email" name="u_email" />
+        <input type="submit" value="Registrarse" />
+    </form>
+
+
+   <form action="/api/v1/login" method="post">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="u_nombre" name="u_nombre"/>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="u_pwd" name="u_pwd"/>
+        <input type="submit" value="Iniciar sesión"/>
+    </form>
+   
+}

@@ -1,0 +1,36 @@
+package index
+
+import (
+	"goland/templates/components"
+	"goland/templates"
+	"goland/model"
+)
+
+
+templ ShowIndex(value model.Index) {
+
+	@templates.GlobalTpl() {
+
+		if value.UserData.ID != 0 {
+
+			if value.UserData.Avatar.Valid {
+				{value.UserData.Avatar.String} // Usa Avatar.String en lugar de Avatar
+			} else { } // Sin Avatar
+
+			@components.CardUser(value.UserData.ID, value.UserData.Name)
+
+        } else {
+            NO ESTAS REGISTRADO! 
+        }
+
+
+		<br></br>
+
+		USUARIOS: <br></br>
+
+		for _, user := range value.AllUsers {
+			@components.CardUsers(user) <br></br>
+		}
+
+	}
+}

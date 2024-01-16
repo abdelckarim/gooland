@@ -1,0 +1,22 @@
+package singles
+
+import (
+	"goland/templates"
+	"goland/model"
+)
+
+
+templ ShowMeme(value model.Index) {
+	@templates.GlobalTpl() {
+		
+		<h1>
+			ID: {value.Get}
+		</h1>
+		
+
+		This is a post from MEME PAGE!
+
+		// @components.ItemsHome("Dato 1", "Dato 2")
+
+	}
+}

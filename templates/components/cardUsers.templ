@@ -1,0 +1,17 @@
+package components
+
+
+import (
+	"goland/model"
+)
+
+
+templ CardUsers(value *model.UserData) {
+    {value.Name} - {value.Email} 
+    // if user.Avatar.Valid {
+    //     {user.Avatar.String}
+    //     Esto si tiene avatar
+    // } else {
+    //     esto no tiene avatar
+    // }
+}
